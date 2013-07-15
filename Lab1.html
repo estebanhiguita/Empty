@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title>Simulating a two-way deterministic finite automaton</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Programming lab 1: Testing emptiness of automatas</h1>
+
+    <p><b>Submission deadline: TBA </b></p>
+  </div>
+
+  <h3>Introduction</h3>
+  
+  <div style="text-align: left;">
+    <p>Given a non deterministic finite automaton 
+      determine if the corresponding language is empty using Haskell.</p>
+  </div>
+
+  <h3>Assignment (80%)</h3>
+
+  <ul style="text-align: left;">
+    <li>Download the <a href="https://github.com/">GitHub</a> repository
+    <a href=
+    "https://github.com/agomezl/Empty.git">agomezl/Empty</a>.
+
+      <ul>
+        <li>The module <code>EAFIT.CB0081.Data.NFA</code> Implements a nondeterministic 
+	  finite automaton.</li>
+
+        <li>The module <code>EAFIT.CB0081.Data.NFA.Examples</code> gives an
+        example of the data type <code>NFA</code>.</li>
+      </ul>
+    </li>
+
+    <li>(70%) Using the module <code>EAFIT.CB0081.Data.NFA</code>, define a
+    function.
+      <pre>
+          empty :: NFA state symbol -&gt; Bool
+</pre>that test whether a nondeterministic finite 
+      automaton represents &empty;.
+
+      <ul>
+        <li>Using the module <code>EAFIT.CB0081.Data.NFA.Examples</code>, for
+        example,
+	  <pre>
+>import EAFIT.CB0081.Data.NFA.Examples
+> :l EmptyNFA.hs
+[1 of 1] Compiling EmptyNFA ( ./EmptyNFA.hs, interpreted )
+Ok, modules loaded: EmptyNFA.
+> empty testEmpty
+True
+</pre>
+	</li>
+      </ul>
+    </li>
+
+    <li>(10%) Annotate your source code using Haddock. Documentation should
+    explain your solution for the assignment.</li>
+  </ul>
+
+  <h3>Clean code (10%)</h3>
+
+  <div style="text-align: left;">
+    Before submitting your code, clean it up! Clean code:
+
+    <ul>
+      <li>Does not have long lines (at most 80 columns).</li>
+
+      <li>Has a consistent layout.</li>
+
+      <li>Has type signatures for everything.</li>
+
+      <li>Has good comments.</li>
+
+      <li>Has no junk (unused code, commented code, unnecessary code).</li>
+
+      <li>Has no overly complicated function definitions.</li>
+
+      <li>Does not contain any repetitive code.</li>
+    </ul>
+  </div>
+
+  <h3>Submission (10%)</h3>
+
+  <div style="text-align: left;">
+    <p>Submission is electronic. Send an email to
+    <tt>asicard(at)eafit(dot)edu(dot)co</tt> and
+    <tt>agomezl(at)eafit(dot)edu(dot)co</tt> and attach a compressed file
+    (.zip or .tar.gz) with your solution.</p>
+
+    <p>Your submission has to include the following:</p>
+
+    <ul>
+      <li><tt>EmptyNFA.hs</tt>, a Haskell module file with your solution for the
+      assignment.</li>
+
+      <li>
+        <tt>README</tt> (or <tt>README.md</tt>), a file containing at least
+        the following information.
+
+        <ul>
+          <li>The name of your program.</li>
+
+          <li>Your name(s).</li>
+
+          <li>A general description of your program.</li>
+
+          <li>Information on how to use your program.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h3>Notes</h3>
+
+  <ul style="text-align: left;">
+    <li>The programming lab may either be solved on your own, or jointly with
+    one other student taking the course.</li>
+
+    <li>You are to use the Haskell Platform 2012.2.0.0 or GHC ≥ 7.4.1.</li>
+
+    <li>The following is the list of GHC options that will be used for
+    testing the programming lab:
+
+      <ul>
+        <li><code>-Wall</code></li>
+
+        <li><code>-fwarn-tabs</code></li>
+
+        <li><code>-Werror</code></li>
+      </ul>
+    </li>
+
+    <li>You can add class constraints to the type signature of
+    <code>accepts</code> if you need them.</li>
+  </ul>
+
+  <h3>Bibliography</h3>
+
+  <p style="text-align: left;">Hopcroft, John E.; Motwani, Rajeev; Ullman, Jeffrey D. (2006). 
+    <i>Introduction to Automata Theory, Languages, and Computation</i> (3rd ed.). Addison-Wesley.</p>
+  <hr>
+
+  <p><a href=
+  "http://www1.eafit.edu.co/asicard/courses/automata-CB0081/">Automata and
+  formal languages - CB0081</a></p>
+
+  <p><a href="http://validator.w3.org/check?uri=referer"><img src=
+  "http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict"
+  height="31" width="88"></a></p>
+</body>
+</html>
