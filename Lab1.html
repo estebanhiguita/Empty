@@ -3,22 +3,23 @@
 
 <html>
 <head>
-  <title>Simulating a two-way deterministic finite automaton</title>
+  <title>Testing emptiness of automata</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 </head>
 
 <body>
   <div style="text-align: center;">
-    <h1>Programming lab 1: Testing emptiness of automatas</h1>
+    <h1>Programming lab 1: Testing emptiness of automata</h1>
 
-    <p><b>Submission deadline: TBA </b></p>
+    <p><b>Submission deadline: Friday, August 16 (11:59 p.m.) </b></p>
   </div>
 
   <h3>Introduction</h3>
-  
+
   <div style="text-align: left;">
-    <p>Given a non deterministic finite automaton 
-      determine if the corresponding language is empty using Haskell.</p>
+    <p>The aim of this programming assignment is to write a Haskell program
+      that given a non-deterministic finite automaton NFA, determine if
+      L(NFA) = &empty;.</p>
   </div>
 
   <h3>Assignment (80%)</h3>
@@ -29,31 +30,28 @@
     "https://github.com/agomezl/Empty.git">agomezl/Empty</a>.
 
       <ul>
-        <li>The module <code>EAFIT.CB0081.Data.NFA</code> Implements a nondeterministic 
+	<li>The module <code>EAFIT.CB0081.Data.NFA</code> implements a non-deterministic
 	  finite automaton.</li>
 
-        <li>The module <code>EAFIT.CB0081.Data.NFA.Examples</code> gives an
-        example of the data type <code>NFA</code>.</li>
+	<li>The module <code>EAFIT.CB0081.Data.NFA.Examples</code> gives an
+	example of the data type <code>NFA</code>.</li>
       </ul>
     </li>
 
     <li>(70%) Using the module <code>EAFIT.CB0081.Data.NFA</code>, define a
     function.
       <pre>
-          empty :: NFA state symbol -&gt; Bool
-</pre>that test whether a nondeterministic finite 
-      automaton represents &empty;.
+	  empty :: NFA state symbol -&gt; Bool
+</pre>that test whether L(NFA) = &empty;.
 
       <ul>
-        <li>Using the module <code>EAFIT.CB0081.Data.NFA.Examples</code>, for
-        example,
+	<li>Using the module <code>EAFIT.CB0081.Data.NFA.Examples</code>, for
+	example,
 	  <pre>
->import EAFIT.CB0081.Data.NFA.Examples
-> :l EmptyNFA.hs
-[1 of 1] Compiling EmptyNFA ( ./EmptyNFA.hs, interpreted )
-Ok, modules loaded: EmptyNFA.
-> empty testEmpty
+> empty emptyNFA
 True
+> empty nonemptyNFA
+False
 </pre>
 	</li>
       </ul>
@@ -100,18 +98,18 @@ True
       assignment.</li>
 
       <li>
-        <tt>README</tt> (or <tt>README.md</tt>), a file containing at least
-        the following information.
+	<tt>README</tt> (or <tt>README.md</tt>), a file containing at least
+	the following information.
 
-        <ul>
-          <li>The name of your program.</li>
+	<ul>
+	  <li>The name of your program.</li>
 
-          <li>Your name(s).</li>
+	  <li>Your name(s).</li>
 
-          <li>A general description of your program.</li>
+	  <li>A general description of your program.</li>
 
-          <li>Information on how to use your program.</li>
-        </ul>
+	  <li>Information on how to use your program.</li>
+	</ul>
       </li>
     </ul>
   </div>
@@ -124,26 +122,15 @@ True
 
     <li>You are to use the Haskell Platform 2012.2.0.0 or GHC ≥ 7.4.1.</li>
 
-    <li>The following is the list of GHC options that will be used for
-    testing the programming lab:
-
-      <ul>
-        <li><code>-Wall</code></li>
-
-        <li><code>-fwarn-tabs</code></li>
-
-        <li><code>-Werror</code></li>
-      </ul>
-    </li>
-
     <li>You can add class constraints to the type signature of
     <code>accepts</code> if you need them.</li>
   </ul>
 
   <h3>Bibliography</h3>
 
-  <p style="text-align: left;">Hopcroft, John E.; Motwani, Rajeev; Ullman, Jeffrey D. (2006). 
-    <i>Introduction to Automata Theory, Languages, and Computation</i> (3rd ed.). Addison-Wesley.</p>
+  <p style="text-align: left;">Hopcroft, John E.; Motwani, Rajeev; Ullman,
+    Jeffrey D. (2006). <i>Introduction to Automata Theory
+    , Languages, and Computation</i> (3rd ed.). Addison-Wesley.</p>
   <hr>
 
   <p><a href=
