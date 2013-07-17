@@ -30,8 +30,8 @@
     "https://github.com/agomezl/Empty.git">agomezl/Empty</a>.
 
       <ul>
-	<li>The module <code>EAFIT.CB0081.Data.NFA</code> implements a non-deterministic
-	  finite automaton.</li>
+	<li>The module <code>EAFIT.CB0081.Data.NFA</code> implements a
+	  non-deterministic finite automaton.</li>
 
 	<li>The module <code>EAFIT.CB0081.Data.NFA.Examples</code> gives an
 	example of the data type <code>NFA</code>.</li>
@@ -42,23 +42,21 @@
     function.
       <pre>
 	  empty :: NFA state symbol -&gt; Bool
-</pre>that test whether L(NFA) = &empty;.
+</pre>that test whether L(NFA) = &empty;. </br>
 
-      <ul>
-	<li>Using the module <code>EAFIT.CB0081.Data.NFA.Examples</code>, for
+	Using the module <code>EAFIT.CB0081.Data.NFA.Examples</code>, for
 	example,
 	  <pre>
-> empty emptyNFA
+GHCi> empty emptyNFA
 True
-> empty nonemptyNFA
+GHCi> empty nonemptyNFA
 False
 </pre>
-	</li>
-      </ul>
     </li>
 
-    <li>(10%) Annotate your source code using Haddock. Documentation should
-    explain your solution for the assignment.</li>
+    <li>(10%) Annotate your source code in a way that
+      explains your solution for the assignment. Improve it with
+      <a href="http://community.haskell.org/~ndm/hlint/">HLint</a> .</li>
   </ul>
 
   <h3>Clean code (10%)</h3>
@@ -120,10 +118,10 @@ False
     <li>The programming lab may either be solved on your own, or jointly with
     one other student taking the course.</li>
 
-    <li>You are to use the Haskell Platform 2012.2.0.0 or GHC ≥ 7.4.1.</li>
+    <li>You are to use the Haskell Platform 2013.2.0.0 or GHC ≥ 7.6.3.</li>
 
     <li>You can add class constraints to the type signature of
-    <code>accepts</code> if you need them.</li>
+    <code>empty</code> if you need them.</li>
   </ul>
 
   <h3>Bibliography</h3>
