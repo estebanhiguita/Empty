@@ -1,6 +1,6 @@
 module EAFIT.CB0081.Data.NFA where
 
-import Data.Set
+import Data.Set ( Set )
 
 -- | A non-deterministic finite automaton.
 data NFA state symbol =
