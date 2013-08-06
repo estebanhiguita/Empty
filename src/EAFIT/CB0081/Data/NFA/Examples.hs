@@ -26,7 +26,7 @@ nonemptyNFA = MkNFA states symbols delta initialState finalStates
     delta 1 'b' = singleton 2
     delta 2 'a' = fromList [1,2]
     delta 3 'a' = singleton 4
-    delta 2 'b' = fromList [3]
+    delta 2 'b' = singleton 3
     delta _ _   = errorState
 
 emptyNFA :: NFA Int Char
@@ -37,5 +37,5 @@ emptyNFA = MkNFA states symbols delta initialState finalStates
     delta 1 'b' = singleton 2
     delta 2 'a' = fromList [1,2]
     delta 3 'a' = singleton 4
-    delta 2 'b' = fromList [4]
+    delta 2 'b' = singleton 4
     delta _ _   = errorState
